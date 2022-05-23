@@ -13,7 +13,7 @@ import configparser
 import time
 
 from model.BasicTrainer_cde import Trainer
-from model.BasicTrainer_fft import Trainer as Trainer_fft
+# from model.BasicTrainer_fft import Trainer as Trainer_fft
 from lib.TrainInits import init_seed
 from lib.dataloader import get_dataloader, get_dataloader_cde
 from lib.TrainInits import print_model_parameters
@@ -142,10 +142,6 @@ if args.model_type=='rde':
     model, vector_field_f, vector_field_g = make_model(args)
 elif args.model_type=='rde2':
     model, vector_field_f, vector_field_g = make_model(args)
-elif args.model_type=='fft':
-    model, vector_field_f, vector_field_g = make_model(args)
-elif args.model_type=='fft_spatial':
-    model, vector_field_g = make_model(args)
 elif args.model_type=='type1':
     model, vector_field_f, vector_field_g = make_model(args)
 elif args.model_type=='type2':
