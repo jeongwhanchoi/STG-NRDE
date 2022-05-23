@@ -4,7 +4,6 @@ import torch.utils.data
 from lib.add_window import Add_Window_Horizon, Add_Window_Horizon_Inc
 from lib.load_dataset import load_st_dataset
 from lib.normalization import NScaler, MinMax01Scaler, MinMax11Scaler, StandardScaler, ColumnMinMaxScaler
-import controldiffeq
 import torchcde
 
 def normalize_dataset(data, normalizer, column_wise=False):
@@ -244,10 +243,8 @@ def get_dataloader_cde(args, normalizer = 'std', tod=False, dow=False, weather=F
         print("---test_coeffs: ", test_coeffs.shape)
 
     elif package == 'neuralcde':
-        #### neuralcde package
-        train_coeffs = controldiffeq.natural_cubic_spline_coeffs(times, x_tra.transpose(1,2))
-        valid_coeffs = controldiffeq.natural_cubic_spline_coeffs(times, x_val.transpose(1,2))
-        test_coeffs = controldiffeq.natural_cubic_spline_coeffs(times, x_test.transpose(1,2))
+        raise NotImplementedError
+
     elif package == 'fft':
         print('fft')
     else:
