@@ -46,10 +46,10 @@ python Run.py --dataset='PEMSD8' --model='GRDE' --model_type='rde2' --embed_dim=
 
 #### PeMSD7(M)
 ```
-python -u Run_cde.py --dataset='PEMSD7M' --model='GRDE' --model_type='rde2' --embed_dim=10 --hid_dim=64 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --comment="" --input_dim=3 --depth=2 --wnd_len=2 --device=0 --tensorboard
+python Run.py --dataset='PEMSD7M' --model='GRDE' --model_type='rde2' --embed_dim=10 --hid_dim=64 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --comment="" --input_dim=3 --depth=2 --wnd_len=2 --device=0 --tensorboard
 ```
 
 #### PeMSD7(L)
 ```
-nohup python -u Run_cde.py --dataset='PEMSD7L' --model='GRDE' --model_type='rde2' --embed_dim=10 --hid_dim=32 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --comment="" --input_dim=8 --depth=4 --wnd_len=2 --device=0 --tensorboard
+python Run.py --dataset='PEMSD7L' --model='GRDE' --model_type='rde2' --embed_dim=10 --hid_dim=32 --hid_hid_dim=64 --num_layers=2 --lr_init=0.001 --weight_decay=1e-3 --epochs=200 --comment="" --input_dim=8 --depth=4 --wnd_len=2 --device=0 --tensorboard
 ```
