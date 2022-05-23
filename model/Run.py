@@ -25,7 +25,7 @@ from torch.utils.tensorboard import SummaryWriter
 Mode = 'train'
 DEBUG = 'False'
 DATASET = 'PEMSD4'      #PEMSD4 or PEMSD8
-MODEL = 'GCDE'
+MODEL = 'GRDE'
 
 #get configuration
 config_file = './{}_{}.conf'.format(DATASET, MODEL)
